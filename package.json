@@ -9,7 +9,8 @@
     "url": "git+https://github.com/KgTeKoN/GSES2-BTC-application.git"
   },
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "dev": "nodemon main.js"
   },
   "keywords": [
     "BTC/UAH"
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/KgTeKoN/GSES2-BTC-application#readme",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
