@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/KgTeKoN/GSES2-BTC-application/issues"
   },
-  "homepage": "https://github.com/KgTeKoN/GSES2-BTC-application#readme"
+  "homepage": "https://github.com/KgTeKoN/GSES2-BTC-application#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
