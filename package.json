@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/KgTeKoN/GSES2-BTC-application#readme",
   "dependencies": {
+    "coingecko-api": "^1.0.10",
     "express": "^4.18.1"
   },
   "devDependencies": {

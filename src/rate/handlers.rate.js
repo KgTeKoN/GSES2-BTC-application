@@ -1,5 +1,5 @@
-const getRate = async () => {
-    return '839000';
-};
+const { readRate } = require('thirdAPI.rate.js')
+
+const getRate = async () => await readRate();
 
 module.exports = { getRate };
