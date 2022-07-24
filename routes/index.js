@@ -2,6 +2,6 @@ import express from "express";
 
 const routes = express.Router();
 
-routes.use(getRate);
+routes.use();
 
 export { routes };
