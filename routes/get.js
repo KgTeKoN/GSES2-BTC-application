@@ -1,9 +1,8 @@
-import express from "express";
+const express = require("express");
+const { controllerGetRate: getRate } = require("../controllers/get.js");
 
 const routes = express.Router();
 
-import { controllerGetRate: getRate } from "../controllers/get.js";
-
 routes.get('/rate', getRate);
 
-export { routes };
+module.exports = routes;

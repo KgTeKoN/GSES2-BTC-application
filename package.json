@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Отримання поточного курсу BTC до UAH. Робота з підпискою.",
   "main": "main.js",
-  "type": "module",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KgTeKoN/GSES2-BTC-application.git"

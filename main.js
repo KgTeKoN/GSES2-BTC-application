@@ -1,8 +1,8 @@
-import { PORT } from './config.js';
-import express from 'express';
-import
+const  port = require('./config.js');
+const express = require('express');
+const routes = require('./routes/get.js');
 
-const APP = express();
-APP.use(routes);
+const app = express();
+app.use(routes);
 
-APP.listen(PORT, () => console.log('Server start'));
+app.listen(port, () => console.log('Server start'));
