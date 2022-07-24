@@ -1,6 +1,6 @@
 const  port = require('./config.js');
 const express = require('express');
-const routes = require('./routes/get.js');
+const routes = require('./src/rate/routes.rate.js');
 
 const app = express();
 app.use(routes);

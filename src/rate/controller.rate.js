@@ -1,4 +1,4 @@
-const { getRate } = require("../handlers/get.js");
+const { getRate } = require("./handlers.rate.js");
 
 const controllerGetRate = async (req, res) => {
     const rate = await getRate();
