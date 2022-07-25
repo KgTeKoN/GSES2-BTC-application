@@ -2,12 +2,10 @@ const CoinGecko = require('coingecko-api');
 
 const CoinGeckoClient = new CoinGecko();
 
-let readRate = async() => {
-    let data = await CoinGeckoClient.simple.price({
+let readRate = async() =>
+    await CoinGeckoClient.simple.price({
         ids: ['bitcoin'],
-        vs_currencies: ['usd'],
+        vs_currencies: ['uah'],
     });
-    return data;
-};
 
-module.exports { readRate };
+module.exports = { readRate };
