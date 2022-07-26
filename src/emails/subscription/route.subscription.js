@@ -1,5 +1,5 @@
 const express = require("express");
-const { controllerSubscribe: routeSubscribes } = require('./controller.subscription.js')
+const { controllerSubscriber: routeSubscribes } = require('./controller.subscription.js')
 
 const route = express.Router();
 

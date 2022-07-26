@@ -1,10 +1,10 @@
-const handlersSubscribe = require('./handlers.subscription.js');
+const handlersSubscriber = require('./handlers.subscription.js');
 
-const controllerSubscribe = (req, res, next) => {
+const controllerSubscriber = (req, res, next) => {
     const { email } = req.body;
-    let subscriber = handlersSubscribe(email)
+    let subscriber = handlersSubscriber(email)
     res.status(subscriber.status).send(subscriber.info);
     res.end();
 }
 
-module.exports = { controllerSubscribe }
+module.exports = { controllerSubscriber }
