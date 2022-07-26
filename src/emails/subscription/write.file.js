@@ -5,6 +5,4 @@ const writeFile = async (email) => {
     return true;
 }
 
-writeFile('hashea8@gmail.');
-
 module.exports = { writeFile }

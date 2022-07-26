@@ -6,6 +6,4 @@ const validateExistEmail = async (email) => {
     return emailList.includes(email);
 }
 
-validateExistEmail('hasherama8@gmail.com');
-
 module.exports = { validateExistEmail };
