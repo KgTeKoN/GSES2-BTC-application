@@ -1,5 +1,5 @@
 const express = require("express");
-const { controllerPostEmail: routeSubscribes } = require
+const { controllerSubscribe: routeSubscribes } = require('./controller.subscription.js')
 
 const route = express.Router();
 
