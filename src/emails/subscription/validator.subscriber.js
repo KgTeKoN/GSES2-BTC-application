@@ -1,11 +1,11 @@
-const readFile = require('./read.file.js');
+const { readFile } = require('./read.file.js');
 
 const validateExistEmail = async (email) => {
-    const emailListString = await readFile;
-    const emailListInArray = emailListString.split(' ');
-    console.log(emailListInArray);
+    const data = await readFile();
+    const emailList = data.split(' ');
+    return emailList.includes(email);
 }
 
-validateExistEmail('hasherama8@gmail.com')
+validateExistEmail('hasherama8@gmail.com');
 
 module.exports = { validateExistEmail };
