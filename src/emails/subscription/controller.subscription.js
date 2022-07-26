@@ -1,8 +1,8 @@
-const handlersSubscriber = require('./handlers.subscription.js');
+const { handlersSubscriber } = require('./handlers.subscription.js');
 
-const controllerSubscriber = (req, res, next) => {
+const controllerSubscriber = async (req, res, next) => {
     const { email } = req.body;
-    let subscriber = handlersSubscriber(email)
+    let subscriber = await handlersSubscriber(email);
     res.status(subscriber.status).send(subscriber.info);
     res.end();
 }
