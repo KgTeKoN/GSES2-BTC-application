@@ -1,4 +1,4 @@
-const { readFile } = require('./read.file.js');
+const { readFile } = require('../read.file.js');
 
 const validateExistEmail = async (email) => {
     const data = await readFile();
