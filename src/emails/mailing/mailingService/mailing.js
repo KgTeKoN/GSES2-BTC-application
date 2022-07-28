@@ -10,3 +10,4 @@ const mailing = async (arr, rate) => {
     await sendEmails(rate);
 }
 
+module.exports = { mailing }

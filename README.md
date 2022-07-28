@@ -1,7 +1,7 @@
 # GSES2-BTC-application
 Отримання поточного курсу BTC до UAH. Робота з підпискою.
 
-Для запуску вводимо команду npm start.
+Для запуску вводимо команду: npm start
 
 config.js - зберігає константи
 
@@ -17,3 +17,7 @@ http://localhost:5000/subscribe - підписка емейлу, через ме
 http://localhost:5000/subscribe/sendEmails - розсилка нового курсу біткоіна на підписані емейли
 Розсилка підтверджується модерацією, тому листа на пошті відразу не буде. 
 Наступну розсилку можна робити тільки після верифікації та виконання першої.
+
+https://login.sendpulse.com/emailservice/  - login: genesis.education.api@gmail.com
+                                             password: GeNeSiS2022
+                                             для перевірки в разі непердбачуваних помилок
