@@ -5,4 +5,4 @@ const route = express.Router();
 
 route.post('/sendEmails', controllerMailing);
 
-modile.exports = route;
+module.exports = route;

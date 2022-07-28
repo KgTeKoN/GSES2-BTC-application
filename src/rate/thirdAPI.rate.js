@@ -8,7 +8,7 @@ let readRate = async() => {
                 ids: ['bitcoin'],
                 vs_currencies: ['uah'],
         });
-        return {status: data.code, message: `Bitcoin price: ${data.data.bitcoin.uah} UAH`}
+        return {status: data.code, message: `Актуальний курс біткоіна: ${data.data.bitcoin.uah} UAH`}
     } catch(e) {
         return {status: 400, message: 'Invalid status value'}
     }
