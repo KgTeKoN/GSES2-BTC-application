@@ -1,11 +1,10 @@
+const sendpulse = require("sendpulse-api");
+const { answerGetter } = require("./answerGetter.js");
+const { SENDER_NAME, SENDER_EMAIL } = require("../../../../config.js");
 
-const {emailList} = require("../../emailList");
+const sendEmails = async (rate) => {
+    sendpulse.createCampaign(answerGetter, `${SENDER_NAME}`, `${SENDER_EMAIL}`,
+        'Зміна курсу біткоіна', `<h1>Курс біткоіна змінився. Зараз він коштує ${rate} гривень </h1>`, 399626);
+};
 
-
-
-
-
-addEmails();
-
-module.exports = { addEmails, sendEmails }
-
+module.exports = { sendEmails }
