@@ -12,18 +12,18 @@ module.exports = {
 		ecmaVersion: 'latest',
 	},
 	rules: {
-		"linebreak-style": 0,
-		"no-underscore-dangle": "off",
-		"max-len": [
-			"error",
-			125
+		'linebreak-style': 0,
+		'no-underscore-dangle': 'off',
+		'max-len': [
+			'error',
+			125,
 		],
-		"no-param-reassign": [
-			"error",
+		'no-param-reassign': [
+			'error',
 			{
-				"props": false
-			}
+				props: false,
+			},
 		],
-		"no-useless-escape": "off"
+		'no-useless-escape': 'off',
 	},
 };

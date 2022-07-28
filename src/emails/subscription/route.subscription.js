@@ -1,6 +1,6 @@
-const express = require("express");
-const { controllerSubscriber: routeSubscribes } = require('./controller.subscription.js');
-const { bodyValidator } = require('./validators/validator.body.js')
+const express = require('express');
+const {controllerSubscriber: routeSubscribes} = require('./controller.subscription.js');
+const {bodyValidator} = require('./validators/validator.body.js');
 
 const route = express.Router();
 

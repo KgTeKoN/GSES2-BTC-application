@@ -1,5 +1,5 @@
-const express = require("express");
-const { controllerGetRate: routeRate } = require("./controller.rate.js");
+const express = require('express');
+const {controllerGetRate: routeRate} = require('./controller.rate.js');
 
 const routes = express.Router();
 

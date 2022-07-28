@@ -1,5 +1,5 @@
 const express = require('express');
-const { controllerMailing } = require('./controller.mailing.js');
+const {controllerMailing} = require('./controller.mailing.js');
 
 const route = express.Router();
 
