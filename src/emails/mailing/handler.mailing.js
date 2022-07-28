@@ -1,15 +1,16 @@
 const { mailing } = require('./mailingService/mailing.js');
 const { emailList } = require("../emailList.js");
-const {readRate} = require("../../rate/thirdAPI.rate");
+const { readRate } = require("../../rate/thirdAPI.rate");
 
 const handlerMailing = async () => {
     try {
-        const rate = readRate();
+        const rate = await readRate();
         const arr = await emailList();
-        await mailing(arr, rate);
+        const isError = await mailing(arr, rate);
+        if (isError) return {status: 400, message: isError}
         return {status: 200, message: 'E-mailʼи відправлено'}
     } catch (e) {
-        return {status: 400, massage: e.message}
+        return {status: 400, message: e.message}
     }
 }
 

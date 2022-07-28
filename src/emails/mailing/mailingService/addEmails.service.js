@@ -1,9 +1,18 @@
 const sendpulse = require("sendpulse-api");
 const { BOOK_ID : id } = require('../../../../config.js');
-const { answerGetter } = require('./callBackFromMailingThirdAPI.js');
 
-const addEmails = async (arr) => {
-    sendpulse.addEmails(answerGetter, id, arr);
+const addEmailsPromise = (arr) => {
+    return new Promise((resolve, reject) => {
+        sendpulse.addEmails((data, err) => {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(data);
+            }
+        }, id, arr)
+    })
 }
 
-module.exports = { addEmails }
+module.exports = { addEmailsPromise }
+
+

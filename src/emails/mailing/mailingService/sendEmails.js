@@ -1,10 +1,19 @@
 const sendpulse = require("sendpulse-api");
-const { answerGetter } = require("./callBackFromMailingThirdAPI.js");
 const { SENDER_NAME, SENDER_EMAIL, BOOK_ID } = require("../../../../config.js");
 
-const sendEmails = async (rate) => {
-    sendpulse.createCampaign(answerGetter, `${SENDER_NAME}`, `${SENDER_EMAIL}`,
-        'Зміна курсу біткоіна', `<h1>Курс біткоіна змінився. ${rate.message} </h1>`, BOOK_ID);
-};
+const sendEmailsPromise = async (rate) => {
+    const rateMessage = await rate.message
+    return new Promise((resolve, reject) => {
+        sendpulse.createCampaign((data, err) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(data);
+                }
+            }, `${SENDER_NAME}`, `${SENDER_EMAIL}`, 'Зміна курсу біткоіна',
+            `<h1>Курс біткоіна змінився. ${rateMessage} </h1>`, BOOK_ID)
+    })
+}
 
-module.exports = { sendEmails }
+module.exports = { sendEmailsPromise }
+
