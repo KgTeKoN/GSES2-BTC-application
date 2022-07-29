@@ -5,8 +5,8 @@ const {readRate} = require('../../rate/thirdAPI.rate');
 const handlerMailing = async () => {
 	try {
 		const rate = await readRate();
-		const arr = await emailList();
-		const isError = await mailing(arr, rate);
+		const storedEmails = await emailList();
+		const isError = await mailing(storedEmails, rate.message);
 		if (isError) {
 			return {status: 400, message: isError};
 		}

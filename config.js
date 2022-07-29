@@ -5,5 +5,7 @@ const TOKEN_STORAGE = '../../../../tmp/';
 const BOOK_ID = 399063;
 const SENDER_EMAIL = 'genesis.education.api@gmail.com';
 const SENDER_NAME = 'Genesis Education';
+const cryptoCurrencies = 'bitcoin';
+const currencies = 'uah';
 
-module.exports = {port, API_USER_ID, API_SECRET, TOKEN_STORAGE, BOOK_ID, SENDER_EMAIL, SENDER_NAME};
+module.exports = {port, API_USER_ID, API_SECRET, TOKEN_STORAGE, BOOK_ID, SENDER_EMAIL, SENDER_NAME, cryptoCurrencies, currencies};

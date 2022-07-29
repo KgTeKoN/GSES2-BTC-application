@@ -6,9 +6,9 @@ const {sendEmailsPromise} = require('./sendEmails.js');
 const mailing = async (arr, rate) => {
 	await sendpulseInit(id, secret, storage);
 	await addEmailsPromise(arr);
-	const isError = await sendEmailsPromise(rate);
-	if (!isError.id) {
-		return isError.message;
+	const result = await sendEmailsPromise(rate);
+	if (!result.id) {
+		return result.message;
 	}
 };
 

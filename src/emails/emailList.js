@@ -1,4 +1,4 @@
-const {readFile} = require('./subscription/read.file.js');
+const {readFile} = require('./subscription/parser.subscribers.js');
 
 const emailList = async () => {
 	const data = await readFile();

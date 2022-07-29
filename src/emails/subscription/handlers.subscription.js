@@ -1,5 +1,5 @@
 const {validateExistEmail} = require('./validators/validator.subscriber.js');
-const {writeFile} = require('./write.file.js');
+const {writeFile} = require('./recording.subscriber.js');
 
 const handlersSubscriber = async email => {
 	const isExist = await validateExistEmail(email);
