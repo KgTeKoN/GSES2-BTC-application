@@ -4,9 +4,9 @@ WORKDIR /src/app
 
 COPY package.json ./
 
-COPY . .
-
 RUN npm ci
+
+COPY . .
 
 EXPOSE 5000
 
