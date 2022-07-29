@@ -1,10 +1,12 @@
-FROM node
+FROM node:16.14.0
 
-WORKDIR /docker
+WORKDIR /src/app
 
-COPY . /docker
+COPY package.json ./
 
-RUN npm install
+COPY . .
+
+RUN npm ci
 
 EXPOSE 5000
 
